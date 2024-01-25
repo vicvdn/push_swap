@@ -5,6 +5,7 @@
 **Algorithms**
 
 - Algorithms : quicksort algorithm explained [https://medium.com/karuna-sehgal/a-quick-explanation-of-quick-sort-7d8e2563629b]
+
 - Articles about approaches of the subject :
   - Turk algorithm : [https://medium.com/@ayogun/push-swap-c1f5d2d41e97]
       * interesting takeout : we should always calculate before rotating because it can allow us to use 1 command instead of 2 (ex rr instead of ra + rb)
