@@ -1,6 +1,6 @@
 # push_swap
 
-##Learning ressources
+## Learning ressources
 
 **Algorithms**
 
