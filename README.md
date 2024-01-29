@@ -15,3 +15,9 @@
 **Doubly linked lists**
 
 - Article in French but wel explained : [http://sdz.tdct.org/sdz/les-listes-doublement-chainees-en-langage-c.html]
+
+
+
+**My progresion:**
+
+- code an atol instead of an atoi to include int min/max
