@@ -18,6 +18,7 @@
 
 
 
-**My progresion:**
+**My progression:**
 
 - code an atol instead of an atoi to include int min/max
+- verify the leak when I test valgrind ./push_swap 214748364 1a 2
