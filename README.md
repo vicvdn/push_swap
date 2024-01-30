@@ -14,12 +14,28 @@
  
 **Doubly linked lists**
 
-- Article in French but wel explained : [http://sdz.tdct.org/sdz/les-listes-doublement-chainees-en-langage-c.html]
+- Article in French but well explained : [http://sdz.tdct.org/sdz/les-listes-doublement-chainees-en-langage-c.html]
 
 
 
 **My progression:**
 
+First we focus on the parsing and the creation of the stack_a. Stack_b is created as well but not filed untill we start actually sorting the data.
+
 - code an atol instead of an atoi to include int min/max and facilitate the parsing
 - verify the leak when I test valgrind ./push_swap 214748364 1a 2 ->OK
-- code a function to go through the list and check if there are doubles in the data ? or maybe it is easier to do so going through the params at first (therefore no allocation and free is not necessary)
+- code a function to go through the params and check for doubles before the parsing one that allocates (therefore no allocation and free if not necessary)
+
+Then we can focus on coding the various operations we are allowed to use: 
+- sa
+- sb
+- ss
+- pa
+- pb
+- ra
+- rb
+- rr
+- rra
+- rrb
+- rrr
+
