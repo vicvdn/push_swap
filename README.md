@@ -20,7 +20,7 @@
 
 **My progression:**
 
-First we focus on the parsing and the creation of the stack_a. Stack_b is created as well but not filed untill we start actually sorting the data.
+First we focus on the parsing and the creation of the stack_a. Stack_b is created as well but not filled untill we start actually sorting the data.
 
 - code an atol instead of an atoi to include int min/max and facilitate the parsing
 - verify the leak when I test valgrind ./push_swap 214748364 1a 2 ->OK
