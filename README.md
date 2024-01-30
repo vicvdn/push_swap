@@ -4,7 +4,7 @@
 
 **Algorithms**
 
-- Algorithms : quicksort algorithm explained [https://medium.com/karuna-sehgal/a-quick-explanation-of-quick-sort-7d8e2563629b]
+- [Algorithms : quicksort algorithm explained](https://medium.com/karuna-sehgal/a-quick-explanation-of-quick-sort-7d8e2563629b)
 
 - Articles about approaches of the subject :
   - Turk algorithm : [https://medium.com/@ayogun/push-swap-c1f5d2d41e97]
