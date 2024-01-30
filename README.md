@@ -15,7 +15,7 @@
 **Doubly linked lists**
 
 - Article in French but well explained : [http://sdz.tdct.org/sdz/les-listes-doublement-chainees-en-langage-c.html]
-
+- I ended up going for 
 
 
 **My progression:**
