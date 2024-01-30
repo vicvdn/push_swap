@@ -20,5 +20,6 @@
 
 **My progression:**
 
-- code an atol instead of an atoi to include int min/max
-- verify the leak when I test valgrind ./push_swap 214748364 1a 2
+- code an atol instead of an atoi to include int min/max and facilitate the parsing
+- verify the leak when I test valgrind ./push_swap 214748364 1a 2 ->OK
+- code a function to go through the list and check if there are doubles in the data ? or maybe it is easier to do so going through the params at first (therefore no allocation and free is not necessary)
