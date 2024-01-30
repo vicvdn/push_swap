@@ -39,3 +39,5 @@ Then we can focus on coding the various operations we are allowed to use:
 - rrb
 - rrr
 
+->swap works
+->rev_rotate not yet
