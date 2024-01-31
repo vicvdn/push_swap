@@ -14,7 +14,7 @@
  
 **Doubly linked lists**
 
-- [French article on doubly linked lists :](http://sdz.tdct.org/sdz/les-listes-doublement-chainees-en-langage-c.html)
+- [French article on doubly linked lists](http://sdz.tdct.org/sdz/les-listes-doublement-chainees-en-langage-c.html)
 
 
 
