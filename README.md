@@ -18,7 +18,7 @@
 
 
 
-**My progression:**
+## My progression:
 
 First we focus on the parsing and the creation of the stack_a. Stack_b is created as well but not filled untill we start actually sorting the data.
 
