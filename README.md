@@ -40,4 +40,6 @@ Then we can focus on coding the various operations we are allowed to use:
 - rrr
 
 ->swap works
-->rev_rotate not yet
+->rev_rotate works
+->rotate works
+->push wip
