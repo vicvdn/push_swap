@@ -38,3 +38,10 @@ Then we can focus on coding the various operations we are allowed to use:
 - rra
 - rrb
 - rrr
+
+Cases to handle:
+- parsing cases : OK
+- 1 value as an arg
+- 2 values as args
+- 3 values as args : OK
+- more than 3 values
