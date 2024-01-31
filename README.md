@@ -38,8 +38,3 @@ Then we can focus on coding the various operations we are allowed to use:
 - rra
 - rrb
 - rrr
-
-->swap works
-->rev_rotate works
-->rotate works
-->push wip
