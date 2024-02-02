@@ -45,3 +45,5 @@ Cases to handle:
 - 2 values as args
 - 3 values as args : OK
 - more than 3 values
+
+Progression : regler le souci de decalage dans les rotations et les totaux. Nettoyer le programme et ne garder que les prints necessaires pr debug.
