@@ -64,3 +64,16 @@ Cases to handle:
 ## TO FIX:
 
 - when we test " neg number 3 4 51 33 45" => segfault
+
+## LLDB tip discovered during the project 
+
+My question to PHIND : why does lldb return the following error when I launch the executable with negative numbers as parameters ? 
+```error: unknown option: -21474836 23 56 13 67 2345 3463456```
+```Use 'lldb --help' for a complete list of options.```
+
+The error message **error: unknown option: -21474836 23 56 13 67 2345 3463456** indicates that LLDB is interpreting the negative numbers you're passing as command-line options, which it doesn't recognize. This typically happens because the arguments are being passed incorrectly to the LLDB command.
+
+To resolve this issue, you should ensure that the arguments intended for your program are separated from the LLDB command itself. This can be done by placing a double dash (--) between the LLDB command and the arguments.
+
+```lldb -- your_program -21474836  23  56  13  67  2345  3463456```
+
