@@ -60,3 +60,7 @@ Cases to handle:
 - 2 values as args
 - 3 values as args : OK
 - more than 3 values
+
+## TO FIX:
+
+- when we test " neg number 3 4 51 33 45" => segfault
