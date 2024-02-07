@@ -33,6 +33,10 @@ I decided to go with the mechanical turk sorting algorithm (article linked befor
         - if ```len > 4``` => I push the 2 top values of stack_a to stack_b and then look at the number of values in stack_a.
         - if ```stack_a->len > 3``` after pushing twice to b then I'm going to calculate the cost of each node of stack_a to be inserted into the right place in stack_b and then push the "cheapest node" until I have 3 values left in stack_a to minisort.
 
+- **How do I compute the cheapest node** : I created an 'operation structure' that I stored the node structure. Therefore each node has a operation count of its own to both calculate the cost for it to be pushed in the right place in stack_b and actually perfom these operations if the node happens to be the cheapest. I first calculate how many operations are needed for each node of stack_a to get to the top and then how many operations are needed for their target in stack_b to get to the top (reminder : the target is the closest inferior number to our number in stack_b and if there is no inferior number the target becomes the maximum). When that is done, we sum the operations needed to get our node to the top of stack_a with those needed to get its target to the top of stack_b in the operation_count structure of our node (we repeat it for each node of stack_a). And now we can compare the total of operations to get our cheapest node and push it into the right place.
+
+- **When we only have 3 values left in stack_a** we do a mini-sort and push back all of our stack_b values calculating each time the target of the head of stack_b (that changes every time we push). Why do we calculate a target again? Because we need to know were to insert back our stack_b values. Now the target is the closest superior value, except if stack_b's head is superior to the maximum of stack_a, we push it over the minimum value of stack_a.
+
 ## My progression:
 
 First we focus on the parsing and the creation of the stack_a. Stack_b is created as well but not filled untill we start actually sorting the data.
@@ -61,9 +65,9 @@ Cases to handle:
 - 3 values as args : OK
 - more than 3 values
 
-## TO FIX:
+## FIXED:
 
-- when we test " neg number 3 4 51 33 45" => segfault
+- when we test " INT_MIN 3 4 51 33 45" => segfault => RESOLVED
 
 ## LLDB tip discovered during the project 
 
