@@ -6,7 +6,7 @@
 /*   By: vvaudain <vvaudain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 15:42:41 by vvaudain          #+#    #+#             */
-/*   Updated: 2024/02/06 11:37:37 by vvaudain         ###   ########.fr       */
+/*   Updated: 2024/02/07 11:49:13 by vvaudain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,17 @@ void	min_to_top(t_data *data)
 void	find_target(t_dlist *stack_a, t_dlist *stack_b, t_node *node)
 {
 	t_node	*cur_node;
-	int		computed_dist;
-	int		distance;
+	long	computed_dist;
+	long	distance;
 
-	distance = INT_MAX;
+	distance = LONG_MAX;
 	cur_node = stack_a->head;
 	while (cur_node != NULL)
 	{
-		computed_dist = ft_abs(stack_b->head->data - cur_node->data);
+		if (stack_b->head->data < cur_node->data)
+			computed_dist = cur_node->data - stack_b->head->data;
+		else
+			computed_dist = ft_abs(stack_b->head->data - cur_node->data);
 		if (computed_dist < distance && cur_node->data > node->data)
 		{
 			distance = computed_dist;
@@ -49,7 +52,7 @@ void	find_target(t_dlist *stack_a, t_dlist *stack_b, t_node *node)
 		}
 		cur_node = cur_node->next;
 	}
-	if (distance == INT_MAX)
+	if (distance == LONG_MAX)
 		stack_b->head->dist->data = compute_min(&stack_a->head);
 }
 

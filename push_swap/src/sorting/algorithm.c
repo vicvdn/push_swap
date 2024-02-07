@@ -6,7 +6,7 @@
 /*   By: vvaudain <vvaudain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 15:31:41 by vvaudain          #+#    #+#             */
-/*   Updated: 2024/02/06 12:34:58 by vvaudain         ###   ########.fr       */
+/*   Updated: 2024/02/07 11:52:48 by vvaudain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	compute_distance(t_node *node, t_data *data)
 {
-	int		computed_dist;
-	int		distance;
+	long	computed_dist;
+	long	distance;
 	t_node	*cur_node;
 
 	if (is_min(node->data, &data->stack_b->head) == 1)
@@ -23,7 +23,7 @@ void	compute_distance(t_node *node, t_data *data)
 		node->dist->data = get_max(&data->stack_b->head);
 		return ;
 	}
-	distance = INT_MAX;
+	distance = LONG_MAX;
 	cur_node = *(&data->stack_b->head);
 	while (cur_node != NULL)
 	{

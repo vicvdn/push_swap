@@ -6,7 +6,7 @@
 /*   By: vvaudain <vvaudain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:57:36 by vvaudain          #+#    #+#             */
-/*   Updated: 2024/02/06 12:30:08 by vvaudain         ###   ########.fr       */
+/*   Updated: 2024/02/06 18:11:54 by vvaudain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typedef struct s_dist
 
 typedef struct s_node
 {
-	int				data;
+	long			data;
 	struct s_node	*pivot;
 	t_ops			*op_count;
 	t_dist			*dist;
@@ -68,7 +68,7 @@ typedef struct s_data
 
 /*TO REMOVE*/
 
-// void	print_list(t_node **head);
+void	print_list(t_node **head);
 // void	print_node(t_node *node);
 // void	print_struct(t_ops *ops);
 
