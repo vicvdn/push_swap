@@ -6,7 +6,7 @@
 /*   By: vvaudain <vvaudain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 11:44:55 by vvaudain          #+#    #+#             */
-/*   Updated: 2024/01/24 13:56:54 by vvaudain         ###   ########.fr       */
+/*   Updated: 2024/02/09 12:59:17 by vvaudain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ static char	**ft_size_split(const char *s, char c, size_t *size)
 	size_t	k;
 	size_t	next;
 
+	if (!*s)
+		return (NULL);
 	*size = ft_count_words(s, c);
 	tab = (char **) ft_calloc(*size + 1, sizeof(char *));
 	if (tab == NULL)

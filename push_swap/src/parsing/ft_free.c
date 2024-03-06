@@ -6,7 +6,7 @@
 /*   By: vvaudain <vvaudain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:02:04 by vvaudain          #+#    #+#             */
-/*   Updated: 2024/02/05 11:07:32 by vvaudain         ###   ########.fr       */
+/*   Updated: 2024/02/09 13:08:39 by vvaudain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ void	ft_free_tab(char **tab)
 	int	i;
 
 	i = 0;
-	while (tab[i])
+	while (tab && tab[i])
 	{
 		free(tab[i]);
 		i++;
 	}
-	free(tab);
+	if (tab)
+		free(tab);
 }
 
 void	free_node(t_node *node)
@@ -48,7 +49,7 @@ void	ft_free_all(t_data *data)
 			ft_free_stack(&data->stack_a->head, &data->stack_a->tail);
 			free(data->stack_a);
 		}
-		if (data->splitted == 1)
+		if (data->splitted == 1 && data->values)
 			ft_free_tab(data->values);
 	}
 }

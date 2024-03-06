@@ -6,7 +6,7 @@
 /*   By: vvaudain <vvaudain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:28:21 by vvaudain          #+#    #+#             */
-/*   Updated: 2024/02/07 11:52:55 by vvaudain         ###   ########.fr       */
+/*   Updated: 2024/02/09 13:09:07 by vvaudain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,21 @@
 int	main(int ac, char **av)
 {
 	t_data	data;
+	int		var;
 
+	var = 0;
 	if (ac == 0 || ac == 1)
 		return (0);
 	create_stacks(&data);
-	if (ft_parsing(ac, av, &data) == -1)
+	var = ft_parsing(ac, av, &data);
+	if (var == -1)
 		return (ft_free_all(&data), -1);
+	else if (var == -2)
+	{
+		free(data.stack_a);
+		free(data.stack_b);
+		return (-1);
+	}
 	ft_sort(&data);
 	ft_free_all(&data);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: vvaudain <vvaudain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:06:02 by vvaudain          #+#    #+#             */
-/*   Updated: 2024/02/06 13:49:50 by vvaudain         ###   ########.fr       */
+/*   Updated: 2024/02/09 13:06:58 by vvaudain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	nb_elements(char **values)
 	int	i;
 
 	i = 0;
-	while (values[i])
+	while (values && values[i])
 		i++;
 	return (i);
 }
@@ -92,6 +92,8 @@ int	ft_parsing(int ac, char **av, t_data *data)
 	if (ac == 2)
 	{
 		values = ft_split(av[1], ' ');
+		if (values == NULL)
+			return (-2);
 		data->values = values;
 		data->splitted = 1;
 		len = nb_elements(values);
